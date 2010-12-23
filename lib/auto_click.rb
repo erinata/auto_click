@@ -1,0 +1,3 @@
+module AutoClick
+  # Your code goes here...
+end

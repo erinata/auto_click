@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
   s.email       = ["erinata@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Several ruby methods for simulating mouse click and cursor movement.}
-  s.description = %q{TODO: Write a gem description}
+  s.description = %q{Several ruby methods for simulating mouse click and cursor movement.}
 
-  #s.rubyforge_project = "auto_click"
+  s.rubyforge_project = "auto_click"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

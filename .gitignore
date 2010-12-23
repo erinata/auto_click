@@ -1,3 +1,5 @@
 pkg/*
 *.gem
 .bundle
+test_build.rb
+test_run.rb

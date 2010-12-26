@@ -15,6 +15,7 @@ You need Win32-api gem for auto_click to work properly:
 or if you have trouble installing it:
 
   gem install win32-api --platform=ruby 
+
   
 == Usage
 

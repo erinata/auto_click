@@ -32,6 +32,9 @@ To scroll down 5 wheel steps
   
   mouse_scroll(-5)
  
+== Tested with
+
+Ruby 1.9.2p0, Windows 7 
   
 == License
 

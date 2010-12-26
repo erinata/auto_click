@@ -22,10 +22,13 @@ To get the current cursor position:
 
   cursor_position
   
-
+To scroll up 10 wheel steps
   
-
-
+  mouse_scroll(10)
   
+To scroll down 5 wheel steps
+  
+  mouse_scroll(-5)
+ 
   
 == License

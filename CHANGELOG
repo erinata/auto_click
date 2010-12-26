@@ -1,3 +1,6 @@
+0.0.3
+Fix gemspec description.
+
 0.0.2
 Implement mouse_scroll and cursor_position. Rename move_mouse to mouse_move.
 

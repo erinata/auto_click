@@ -1,4 +1,4 @@
-= auto_click
+= AutoClick
 
 Ruby gem for simulating mouse clicks and mouse cursor movement.
 
@@ -31,6 +31,15 @@ To scroll up 10 wheel steps
 To scroll down 5 wheel steps
   
   mouse_scroll(-5)
+ 
+ 
+== Method List
+
+# left_click
+# right_click
+# cursor_position
+# mouse_move(x,y)
+# mouse_scroll(d)
  
 == Tested with
 

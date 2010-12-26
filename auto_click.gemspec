@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Smulating mouse click and cursor movement in Ruby}
   s.description = %q{Provide several ruby methods for simulating mouse click and cursor movement in Windows. Currently only contains 5 methods (mouse_move(x,y), left_click, right_click, cursor_position and mouse_scroll).}
 
+
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }

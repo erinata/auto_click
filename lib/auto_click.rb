@@ -9,7 +9,6 @@ module AutoClick
   @@leftdown = InputStructure.mouse_input(0,0,0,0x0002)
   @@leftup = InputStructure.mouse_input(0,0,0,0x0004)
 
-
   def send_input(inputs)
     n = inputs.size
     ptr = inputs.collect {|i| i.to_s}.join

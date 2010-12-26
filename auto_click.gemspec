@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["erinata@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Smulating mouse click and cursor movement in Ruby}
-  s.description = %q{Provide several ruby methods for simulating mouse click and cursor movement in Windows. Currently only contains 3 methods (move_mouse(x,y), left_click and right_click).}
+  s.description = %q{Provide several ruby methods for simulating mouse click and cursor movement in Windows. Currently only contains 5 methods (mouse_move(x,y), left_click, right_click, cursor_position and mouse_scroll).}
 
   # s.rubyforge_project = "auto_click"
 

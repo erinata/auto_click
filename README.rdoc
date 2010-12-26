@@ -4,8 +4,18 @@ Ruby gem for simulating mouse clicks and mouse cursor movement.
 
 == Install
 
-  gem install auto_click
+To install auto_click:
 
+  gem install auto_click
+  
+You need Win32-api gem for auto_click to work properly:
+  
+  gem install Win32-api
+  
+or if you have trouble installing it:
+
+  gem install Win32-api --platform=ruby 
+  
 == Usage
 
 To use the methods provided by auto_click. You need to require it.

@@ -4,6 +4,8 @@ Ruby gem for simulating mouse clicks and mouse cursor movement.
 
 == Install
 
+  gem install auto_click
+
 == Usage
 
 == License

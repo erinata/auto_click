@@ -22,12 +22,6 @@ module AutoClick
   MOUSEEVENTF_VIRTUALDESK = 0x4000
   WHEEL_DELTA = 120
   
-  INPUT_KEYBOARD = 1
-  KEYEVENTF_EXTENDEDKEY = 0x0001  # If specified, the scan code was preceded by a prefix byte that has the value 0xE0 (224).
-  KEYEVENTF_KEYUP = 0x0002  # If specified, the key is being released. If not specified, the key is being pressed.
-  KEYEVENTF_SCANCODE = 0x0008 #  If specified, wScan identifies the key and wVk is ignored.
-  KEYEVENTF_UNICODE = 0x0004 # If specified, the system synthesizes a VK_PACKET keystroke. The wVk parameter must be zero. This flag can only be combined with the KEYEVENTF_KEYUP flag. For more information, see the Remarks section. 
-
   @@rightdown = InputStructure.mouse_input(0,0,0,MOUSEEVENTF_RIGHTDOWN)
   @@rightup = InputStructure.mouse_input(0,0,0,MOUSEEVENTF_RIGHTUP)  
   @@leftdown = InputStructure.mouse_input(0,0,0,MOUSEEVENTF_LEFTDOWN)
@@ -57,6 +51,12 @@ module AutoClick
     @@gcp.call(point)
     point.unpack('LL')  
   end
+  
+  def mouse_scroll(d) # positive d means scroll up, one wheel click is WHEEL_DELTA = 120
+    scroll = InputStructure.mouse_input(0,0,d,MOUSEEVENTF_WHEEL)
+    send_input( [scroll])
+  end
+
 
 end
 

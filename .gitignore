@@ -4,3 +4,4 @@ pkg/*
 test_build.rb
 test_build.rb
 test_run.rb
+.project

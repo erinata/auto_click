@@ -8,5 +8,24 @@ Ruby gem for simulating mouse clicks and mouse cursor movement.
 
 == Usage
 
+To use the methods provided by auto_click. You need to require it.
 
+  require 'auto_click'
+
+To move the mouse cursor to 50,50 ( the top left corner is 0,0) and perform a double left click:
+
+  mouse_move(50,50)
+  left_click
+  left_click
+  
+To get the current cursor position:
+
+  cursor_position
+  
+
+  
+
+
+  
+  
 == License

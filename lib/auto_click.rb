@@ -38,8 +38,8 @@ module AutoClick
     point.unpack('LL')  
   end
   
-  def mouse_scroll(d) # positive d means scroll up, one wheel click is WHEEL_DELTA = 120
-    scroll = InputStructure.mouse_input(0,0,d,0x0800)
+  def mouse_scroll(d) 
+    scroll = InputStructure.mouse_input(0,0,d*120,0x0800)
     send_input( [scroll])
   end
 
@@ -47,7 +47,7 @@ module AutoClick
 end
 
 
-include AutoClick  # This line allo auto include when the user require the gem
+include AutoClick  # This line allow auto include when the user require the gem
 
   
 

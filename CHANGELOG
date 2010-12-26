@@ -1,3 +1,6 @@
+0.0.6
+rewrite the program using dl instead of Win32API
+
 0.0.5
 remove gem dependency requirement.
 

@@ -9,4 +9,6 @@ module InputStructure
     mi[4] = dw_flags
     mi.pack('LLLLLLL')
   end
+  
+  
 end

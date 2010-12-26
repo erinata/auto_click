@@ -1,14 +1,8 @@
-
-
-require 'Win32API'
-
-require "auto_click/input_structure"
+require 'dl/import'
+require 'auto_click/input_structure'
+require 'auto_click/user32'
 
 module AutoClick
-  
-  @@gcp = Win32API.new("user32", "GetCursorPos",'P','V')
-  @@scp = Win32API.new("user32", 'SetCursorPos', 'II', 'V')
-  @@si = Win32API.new("user32", 'SendInput','IPI', 'I')
   
   @@rightdown = InputStructure.mouse_input(0,0,0,0x0008)
   @@rightup = InputStructure.mouse_input(0,0,0,0x0010)  
@@ -19,11 +13,11 @@ module AutoClick
   def send_input(inputs)
     n = inputs.size
     ptr = inputs.collect {|i| i.to_s}.join
-    @@si.call(n, ptr, inputs[0].size)
+    User32.SendInput(n, ptr, inputs[0].size)
   end
 
   def mouse_move(x,y)
-    @@scp.call(x,y)
+    User32.SetCursorPos(x,y)
   end
   
   def right_click
@@ -36,7 +30,7 @@ module AutoClick
   
   def cursor_position
     point = " " * 8
-    @@gcp.call(point)
+    User32.GetCursorPos(point)
     point.unpack('LL')  
   end
   
@@ -44,7 +38,6 @@ module AutoClick
     scroll = InputStructure.mouse_input(0,0,d*120,0x0800)
     send_input( [scroll])
   end
-
 
 end
 

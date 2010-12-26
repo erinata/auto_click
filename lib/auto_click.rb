@@ -32,7 +32,7 @@ module AutoClick
     send_input( [@@leftdown, @@leftup] )
   end
   
-  def get_cursor_pos
+  def cursor_position
     point = " " * 8
     @@gcp.call(point)
     point.unpack('LL')  

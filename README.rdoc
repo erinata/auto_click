@@ -35,11 +35,15 @@ To scroll down 5 wheel steps
  
 == Method List
 
-# left_click
-# right_click
-# cursor_position
-# mouse_move(x,y)
-# mouse_scroll(d)
+- left_click
+
+- right_click
+
+- cursor_position
+
+- mouse_move(x,y)
+
+- mouse_scroll(d)
  
 == Tested with
 

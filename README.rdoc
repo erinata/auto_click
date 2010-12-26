@@ -8,4 +8,5 @@ Ruby gem for simulating mouse clicks and mouse cursor movement.
 
 == Usage
 
+
 == License

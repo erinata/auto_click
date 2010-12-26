@@ -20,7 +20,7 @@ module AutoClick
     @@si.call(n, ptr, inputs[0].size)
   end
 
-  def move_mouse(x,y)
+  def mouse_move(x,y)
     @@scp.call(x,y)
   end
   

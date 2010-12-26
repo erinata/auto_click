@@ -1,3 +1,5 @@
+0.0.2
+Implement mouse_scroll and cursor_position. Rename move_mouse to mouse_move.
 
 0.0.1 
 Initialize project. Primitive implementation of move_mouse, left_click and right_click.

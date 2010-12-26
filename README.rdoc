@@ -8,15 +8,6 @@ To install auto_click:
 
   gem install auto_click
   
-You need Win32-api gem for auto_click to work properly:
-  
-  gem install win32-api
-  
-or if you have trouble installing it, install the ruby devkit and run:
-
-  gem install win32-api --platform=ruby 
-
-  
 == Usage
 
 To use the methods provided by auto_click. You need to require it.

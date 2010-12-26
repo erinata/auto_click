@@ -1,12 +1,14 @@
-require 'win32/api'
-include Win32
+
+
+require 'Win32API'
+
 require "auto_click/input_structure"
 
 module AutoClick
   
-  @@gcp = API.new("GetCursorPos",'P','V',"user32")
-  @@scp = API.new('SetCursorPos', 'II', 'V',"user32")
-  @@si = API.new('SendInput','IPI', 'I',"user32")
+  @@gcp = Win32API.new("user32", "GetCursorPos",'P','V')
+  @@scp = Win32API.new("user32", 'SetCursorPos', 'II', 'V')
+  @@si = Win32API.new("user32", 'SendInput','IPI', 'I')
   
   @@rightdown = InputStructure.mouse_input(0,0,0,0x0008)
   @@rightup = InputStructure.mouse_input(0,0,0,0x0010)  

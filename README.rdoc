@@ -47,7 +47,11 @@ To scroll down 5 wheel steps
  
 == Tested with
 
-Ruby 1.9.2p0, Windows 7 
+- Ruby 1.9.1-p430, Windows 7
+
+- Ruby 1.9.2-p0, Windows 7
+
+- Ruby 1.9.2-p136, Windows 7
   
 == License
 

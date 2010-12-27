@@ -19,6 +19,11 @@ module AutoClick
     User32.SetCursorPos(x,y)
   end
   
+  def mouse_move_relative(x,y)
+    move = InputStructure.mouse_input(x,y,0,0x0001)
+    send_input( [move])
+  end
+    
   def right_click
     send_input( [@@rightdown, @@rightup] )
   end

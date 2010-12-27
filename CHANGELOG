@@ -1,5 +1,5 @@
 0.1.2
-Primitive implementation of move_mouse_percentage_absolute_real, move_mouse_percentage_absolute_virtual, mouse_move_percentage_relative_real, mouse_move_percentage_relative_virtual.
+Primitive implementation of mouse_move_percentage_absolute_real, mouse_move_percentage_absolute_virtual, mouse_move_percentage_relative_real, mouse_move_percentage_relative_virtual.
 (Need better consolidation before putting them to the method list)
 
 0.1.1

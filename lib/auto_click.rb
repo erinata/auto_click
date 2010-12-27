@@ -19,8 +19,8 @@ module AutoClick
     User32.SetCursorPos(x,y)
   end
   
-  def mouse_move_relative(x,y)
-    move = InputStructure.mouse_input(x,y,0,0x0001)
+  def mouse_move_percentage_relative_virtual(x,y)
+    move = InputStructure.mouse_input(x*65536,y*65536,0,0x0001)
     send_input( [move])
   end
     

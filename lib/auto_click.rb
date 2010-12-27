@@ -24,6 +24,11 @@ module AutoClick
     send_input( [move])
   end
   
+  def mouse_move_percentage_relative_real(x,y)
+    move = InputStructure.mouse_input(x*65536,y*65536,0,0x4001)
+    send_input( [move])
+  end
+  
   def move_mouse_percentage_absolute_virtual(x,y)
     move = InputStructure.mouse_input(x*65536,y*65536,0,0xc001)
     send_input( [move])

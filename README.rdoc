@@ -20,15 +20,15 @@ To move the mouse cursor to 50,50 ( the top left corner is 0,0) and perform a do
   left_click
   left_click
   
-To get the current cursor position:
+To show the current cursor position:
 
-  cursor_position
+  puts cursor_position
   
-To scroll up 10 wheel steps
+To scroll up (forward) 10 wheel steps
   
   mouse_scroll(10)
   
-To scroll down 5 wheel steps
+To scroll down (backward) 5 wheel steps
   
   mouse_scroll(-5)
  

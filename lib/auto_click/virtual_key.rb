@@ -8,7 +8,6 @@ module VirtualKey
     end
     string = string.to_sym.downcase  
     case string
-        
     #when
     #  0x00S
     #when
@@ -105,25 +104,25 @@ module VirtualKey
       0x2E
     when :help
       0x2F
-    when :num0
+    when :num0,:number0
       0x30
-    when :num1
+    when :num1,:number1
       0x31
-    when :num2
+    when :num2,:number2
       0x32
-    when :num3
+    when :num3,:number3
       0x33
-    when :num4
+    when :num4,:number4
       0x34
-    when :num5
+    when :num5,:number5
       0x35
-    when :num6
+    when :num6,:number6
       0x36
-    when :num7
+    when :num7,:number7
       0x37
-    when :num8
+    when :num8,:number8
       0x38
-    when :num9
+    when :num9,:number9
       0x39
     #when
     #  0x3A
@@ -191,7 +190,7 @@ module VirtualKey
       0x59
     when :z
       0x5A
-    when :win, :window,:leftwin
+    when :win, :windows,:leftwin
       0x5B
     when :rightwin
       0x5C
@@ -201,25 +200,25 @@ module VirtualKey
     #  0x5E
     when :sleep
       0x5F
-    when :numpad0
+    when :numpad0,:numberpad0
       0x60
-    when :numpad1
+    when :numpad1,:numberpad1
       0x61
-    when :numpad2
+    when :numpad2,:numberpad2
       0x62
-    when :numpad3
+    when :numpad3,:numberpad3
       0x63
-    when :numpad4
+    when :numpad4,:numberpad4
       0x64
-    when :numpad5
+    when :numpad5,:numberpad5
       0x65
-    when :numpad6
+    when :numpad6,:numberpad6
       0x66
-    when :numpad7
+    when :numpad7,:numberpad7
       0x67
-    when :numpad8
+    when :numpad8,:numberpad8
       0x68
-    when :numpad9
+    when :numpad9,:numberpad9
       0x69
     when :multiply,:multiplication
       0x6A

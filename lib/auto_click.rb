@@ -1,5 +1,6 @@
 require 'dl/import'
 require 'auto_click/input_structure'
+require 'auto_click/virtual_key'
 require 'auto_click/user32'
 
 module AutoClick
@@ -84,17 +85,32 @@ module AutoClick
     sleep 0.1
   end
   
-  def key_stroke(key_code)
-    send_input(
-    [InputStructure.keyboard_input(key_code,0x0000),
-     InputStructure.keyboard_input(key_code,0x0002)])
+  def key_stroke(key_symbol)
+    if key_symbol.kind_of? Symbol
+      key_code=VirtualKey.key_from_symbol(key_symbol)
+    elsif key_symbol.kind_of? Fixnum
+      key_code=key_symbol
+    end
+    send_input([InputStructure.keyboard_input(key_code,0x0000),
+                InputStructure.keyboard_input(key_code,0x0002)])
+    
   end
   
-  def key_down(key_code)
+  def key_down(key_symbol)
+    if key_symbol.kind_of? Symbol
+      key_code=VirtualKey.key_from_symbol(key_symbol)
+    elsif key_symbol.kind_of? Fixnum
+      key_code=key_symbol
+    end
     send_input([InputStructure.keyboard_input(key_code,0x0000)])
   end
   
-  def key_up(key_code)
+  def key_up(key_symbol)
+    if key_symbol.kind_of? Symbol
+      key_code=VirtualKey.key_from_symbol(key_symbol)
+    elsif key_symbol.kind_of? Fixnum
+      key_code=key_symbol
+    end
     send_input([InputStructure.keyboard_input(key_code,0x0002)])
   end
 end

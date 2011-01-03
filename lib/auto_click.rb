@@ -61,7 +61,28 @@ module AutoClick
     scroll = InputStructure.mouse_input(0,0,d*120,0x0800)
     send_input( [scroll])
   end
-
+  
+  def left_drag(sx,sy,ex,ey)
+    mouse_move sx,sy
+    sleep 0.1
+    send_input( [@@leftdown] )
+    sleep 0.1
+    mouse_move ex,ey
+    sleep 0.1
+    send_input( [@@leftup] )
+    sleep 0.1
+  end
+  
+  def right_drag(sx,sy,ex,ey)
+    mouse_move sx,sy
+    sleep 0.1
+    send_input( [@@rightdown] )
+    sleep 0.1
+    mouse_move ex,ey
+    sleep 0.1
+    send_input( [@@rightup] )
+    sleep 0.1
+  end
 end
 
 

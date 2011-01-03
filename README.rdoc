@@ -4,9 +4,9 @@ Ruby gem for simulating mouse clicks and mouse cursor movement.
 
 == Description
 
-Provide several Ruby methods for simulating mouse click and cursor movement in Windows. 
-This gem use DL library and SendInput method so there is no dependency on FFI or Win32-api. 
-Currently only contains 5 methods (mouse_move(x,y), left_click, right_click, cursor_position and mouse_scroll).
+Provide several Ruby methods for simulating mouse click and cursor movement in Windows.
+This gem use DL library and SendInput method so there is no dependency on FFI, AutoIt or Win32-api. 
+Currently contains 7 methods (mouse_move(x,y), left_click, right_click, cursor_position, mouse_scroll, left_drag and right drag).
 More control over mouse movement such as speed or locus will be implemented in future releases.
 
 == Install
@@ -38,6 +38,9 @@ To scroll up (forward) 10 wheel steps
 To scroll down (backward) 5 wheel steps
   
   mouse_scroll(-5)
+  
+To drag the icon on (50,50) to (200,300)
+  left_drag(50,50,200,300)
  
  
 == Method List
@@ -51,6 +54,10 @@ To scroll down (backward) 5 wheel steps
 - mouse_move(x,y)
 
 - mouse_scroll(d)
+
+- left_drag(sx,sy,ex,ey)
+
+- right_drag(sx,sy,ex,ey)
  
 == Tested with
 

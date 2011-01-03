@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
   s.email       = ["erinata@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Smulating mouse click and cursor movement}
-  s.description = %q{Provide several Ruby methods for simulating mouse click and cursor movement in Windows. 
-                     This gem use DL library and SendInput method so there is no dependency on FFI or Win32-api. 
-                     Currently only contains 5 methods (mouse_move(x,y), left_click, right_click, cursor_position and mouse_scroll).
+  s.description = %q{Provide several Ruby methods for simulating mouse click and cursor movement in Windows.\n 
+                     This gem use DL library and SendInput method so there is no dependency on FFI, AutoIt or Win32-api.\n 
+                     Currently contains 7 methods (mouse_move(x,y), left_click, right_click, cursor_position, mouse_scroll, left_drag and right drag).\n
                      More control over mouse movement such as speed or locus will be implemented in future releases.}
   
   s.required_ruby_version = '>= 1.9.0'

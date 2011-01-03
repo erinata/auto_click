@@ -1,7 +1,12 @@
 module VirtualKey
   def self.key_from_symbol(symbol)
+        
+    if symbol.kind_of? Fixnum
+      return symbol
+    elsif !(symbol.kind_of? Symbol) 
+      symbol = symbol.to_sym
+    end  
     symbol = symbol.downcase
-    
     case symbol
     #when
     #  0x00S
@@ -520,5 +525,5 @@ module VirtualKey
     
 
   end
-  
+ 
 end

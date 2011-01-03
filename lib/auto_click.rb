@@ -86,33 +86,24 @@ module AutoClick
   end
   
   def key_stroke(key_symbol)
-    if key_symbol.kind_of? Symbol
-      key_code=VirtualKey.key_from_symbol(key_symbol)
-    elsif key_symbol.kind_of? Fixnum
-      key_code=key_symbol
-    end
+    key_code=VirtualKey.key_from_symbol(key_symbol)
     send_input([InputStructure.keyboard_input(key_code,0x0000),
                 InputStructure.keyboard_input(key_code,0x0002)])
     
   end
   
   def key_down(key_symbol)
-    if key_symbol.kind_of? Symbol
-      key_code=VirtualKey.key_from_symbol(key_symbol)
-    elsif key_symbol.kind_of? Fixnum
-      key_code=key_symbol
-    end
+    key_code=VirtualKey.key_from_symbol(key_symbol)
     send_input([InputStructure.keyboard_input(key_code,0x0000)])
   end
   
   def key_up(key_symbol)
-    if key_symbol.kind_of? Symbol
-      key_code=VirtualKey.key_from_symbol(key_symbol)
-    elsif key_symbol.kind_of? Fixnum
-      key_code=key_symbol
-    end
+    key_code=VirtualKey.key_from_symbol(key_symbol)
     send_input([InputStructure.keyboard_input(key_code,0x0002)])
   end
+  
+  
+
 end
 
 

@@ -522,6 +522,3 @@ module VirtualKey
   end
   
 end
-
-
-puts VirtualKey.key_from_symbol(:tab)

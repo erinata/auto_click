@@ -84,13 +84,18 @@ module AutoClick
     sleep 0.1
   end
   
-  def typing
-    t = []
-    t[0] = InputStructure.keyboard_input(65,0x0000)
-    t[1] = InputStructure.keyboard_input(65,0x0002)
-    t[2] = InputStructure.keyboard_input(65,0x0000)
-    t[3] = InputStructure.keyboard_input(65,0x0002)
-    send_input(t)
+  def key_stroke(key_code)
+    send_input(
+    [InputStructure.keyboard_input(key_code,0x0000),
+     InputStructure.keyboard_input(key_code,0x0002)])
+  end
+  
+  def key_down(key_code)
+    send_input([InputStructure.keyboard_input(key_code,0x0000)])
+  end
+  
+  def key_up(key_code)
+    send_input([InputStructure.keyboard_input(key_code,0x0002)])
   end
 end
 

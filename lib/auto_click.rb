@@ -83,6 +83,15 @@ module AutoClick
     send_input( [@@rightup] )
     sleep 0.1
   end
+  
+  def typing
+    t = []
+    t[0] = InputStructure.keyboard_input(65,0x0000)
+    t[1] = InputStructure.keyboard_input(65,0x0002)
+    t[2] = InputStructure.keyboard_input(65,0x0000)
+    t[3] = InputStructure.keyboard_input(65,0x0002)
+    send_input(t)
+  end
 end
 
 

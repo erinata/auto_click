@@ -11,4 +11,14 @@ module InputStructure
   end
   
   
+  def self.keyboard_input(wVk,dw_flags)
+    ki = Array.new(7, 0)
+    ki[0] = INPUT_KEYBOARD
+    ki[1] = wVk
+    ki[2] = dw_flags
+    ki.pack('LLLLLLL')
+  end
+
+  
+  
 end

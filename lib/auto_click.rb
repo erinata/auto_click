@@ -89,7 +89,6 @@ module AutoClick
     key_code=VirtualKey.key_from_symbol(key_symbol)
     send_input([InputStructure.keyboard_input(key_code,0x0000),
                 InputStructure.keyboard_input(key_code,0x0002)])
-    
   end
   
   def key_down(key_symbol)
@@ -102,7 +101,9 @@ module AutoClick
     send_input([InputStructure.keyboard_input(key_code,0x0002)])
   end
   
-  
+  def type(string)
+    puts string
+  end
 
 end
 

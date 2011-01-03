@@ -3,11 +3,12 @@ module VirtualKey
         
     if symbol.kind_of? Fixnum
       return symbol
-    elsif !(symbol.kind_of? Symbol) 
-      symbol = symbol.to_sym
-    end  
-    symbol = symbol.downcase
+    elsif symbol.kind_of? String
+      symbol=symbol.delete('_').delete('-').delete(' ')
+    end
+    symbol = symbol.to_sym.downcase  
     case symbol
+        
     #when
     #  0x00S
     #when

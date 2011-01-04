@@ -380,20 +380,20 @@ module VirtualKey
     #  0xB8
     #when
     #  0xB9
-    #when
-    #  0xBA
-    #when
-    #  0xBB
-    #when
-    #  0xBC
-    #when
-    #  0xBD
-    #when
-    #  0xBE
-    #when
-    #  0xBF
-    #when
-    #  0xC0
+    when :semicolon,:colon
+      0xBA
+    when :equal, :plus
+      0xBB
+    when :comma, :smallerthan
+      0xBC
+    when :hyphen,:underscore,:understrike
+      0xBD
+    when :period, :dot, :greaterthan
+      0xBE
+    when :slash,:question,:questionmark,:forwardslash
+      0xBF
+    when :tilde,
+      0xC0
     #when
     #  0xC1
     #when
@@ -446,14 +446,14 @@ module VirtualKey
     #  0xD9
     #when
     #  0xDA
-    #when
-    #  0xDB
-    #when
-    #  0xDC
-    #when
-    #  0xDD
-    #when
-    #  0xDE
+    when :openbranket, :leftbranket, :opensquarebranket, :leftsquarebranket, :squarebranket 
+      0xDB
+    when :pipe, :pipes, :backslash
+      0xDC
+    when :closebranket, :closesquarebranket, :rightbranket, :rightsquarebranket
+      0xDD
+    when :quote,:singlequote,:doublequote
+      0xDE
     #when
     #  0xDF
     #when
@@ -508,10 +508,10 @@ module VirtualKey
     #  0xF8
     #when
     #  0xF9
-    #when
-    #  0xFA
-    #when
-    #  0xFB
+    when :play 
+      0xFA
+    when :zoom
+      0xFB
     #when
     #  0xFC
     #when

@@ -62,7 +62,7 @@ Suppose the notepad window on the top left corner of the screen, to type "Auto C
   key_stroke('k')
   
 Methods like get_windows("notepad") will be implemented in future release.
-Notice that 'a' means the key 'a' instead of the letter 'a'. Therefore key_stroke('a') and key_stroke('A') is basically the same. If the capslock is off but you want to type the capitalized A, you need to:
+Notice that 'a' means the key 'a' instead of the letter 'a'. Therefore key_stroke('a') and key_stroke('A') are basically the same. If the capslock is off but you want to type the capitalized A, you need to:
 
   key_down('shift')        
   key_stroke('a')  

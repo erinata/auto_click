@@ -452,7 +452,7 @@ module VirtualKey
       0xDC
     when :closebranket, :closesquarebranket, :rightbranket, :rightsquarebranket
       0xDD
-    when :quote,:singlequote,:doublequote, :rightquote
+    when :quote,:singlequote,:doublequote, :rightquote, :acute, :acuteaccent
       0xDE
     #when
     #  0xDF

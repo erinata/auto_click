@@ -102,6 +102,8 @@ module AutoClick
   end
   
   def type(string)
+    key_stroke(:capslock) if get_key_state(:capslock)==1
+    
     string=string.to_s
     string.each_char do |c|
       if ('a'..'z').include? c
@@ -119,7 +121,7 @@ module AutoClick
   def get_key_state(key_name)
     code=VirtualKey.code_from_name(key_name)
     User32.GetKeyState(code)
-    # For normal keys
+    # For normal keys (such as a)
     # When the key is down the value is -128
     # When the key is up the value is 0
      

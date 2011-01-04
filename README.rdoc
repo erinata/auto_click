@@ -1,5 +1,6 @@
 = AutoClick
 
+
 Smulating mouse click, cursor movement and keystrokes
 
 == Install
@@ -102,7 +103,8 @@ is the same as
 - key_up(key_name)
  
  
-== Change log (for full change log please refer to the CHANGELOG file in the repository
+== Change log 
+(for full change log please refer to the CHANGELOG file in the repository
 
 - 0.1.9 Add support for keybaord region specific keys using US-keyboard standard
 

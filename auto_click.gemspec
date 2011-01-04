@@ -17,7 +17,9 @@ Gem::Specification.new do |s|
                      (More control over mouse movement such as speed or locus will be implemented in future releases)}
   
   s.required_ruby_version = '>= 1.9.0'
-
+  
+  s.executables << 'testing'
+  
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }

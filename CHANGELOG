@@ -1,4 +1,7 @@
 
+0.1.9
+Add support for keybaord region specific keys using US-keyboard standard
+
 0.1.8
 Implement key_stroke, key_down and key_up
 
@@ -22,7 +25,7 @@ Primitive implementation of mouse_move_percentage_absolute_real, mouse_move_perc
 Specify required ruby environments
 
 0.1.0
-rewrite the program using dl instead of Win32API
+rewrite the program using DL instead of Win32API
 
 0.0.5
 remove gem dependency requirement.

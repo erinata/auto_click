@@ -1,6 +1,6 @@
 
 0.1.8
-
+Implement key_stroke, key_down and key_up
 
 0.1.7
 Primitive implementation of key_stroke. Need good api before putting it into method list

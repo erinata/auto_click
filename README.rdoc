@@ -1,13 +1,18 @@
 = AutoClick
 
-Ruby gem for simulating mouse clicks and mouse cursor movement.
+Smulating mouse click, cursor movement and keystrokes
 
 == Description
 
-Provide several Ruby methods for simulating mouse click and cursor movement in Windows.
-This gem use DL library and SendInput method so there is no dependency on FFI, AutoIt or Win32-api. 
-Currently contains 7 methods (mouse_move(x,y), left_click, right_click, cursor_position, mouse_scroll, left_drag and right drag).
-More control over mouse movement such as speed or locus will be implemented in future releases.
+Provide several Ruby methods for simulating mouse click, cursor movement and keystrokes in Windows.
+ 
+This gem use DL library and SendInput method so there is no dependency on FFI, AutoIt or Win32-api.
+ 
+Methods include mouse_move(x,y), left_click, right_click, cursor_position, mouse_scroll, key_up, key_down...etc.
+
+See https://github.com/erinata/auto_click for more details.
+
+(More control over mouse movement such as speed or locus will be implemented in future releases)
 
 == Install
 
@@ -31,16 +36,19 @@ To show the current cursor position:
 
   puts cursor_position
   
-To scroll up (forward) 10 wheel steps
+To scroll up (forward) 10 wheel steps:
   
   mouse_scroll(10)
   
-To scroll down (backward) 5 wheel steps
+To scroll down (backward) 5 wheel steps:
   
   mouse_scroll(-5)
   
-To drag the icon on (50,50) to (200,300)
+To drag the icon on (50,50) to (200,300):
   left_drag(50,50,200,300)
+ 
+To send keystroke "a":
+  key_stroke("a")
  
  
 == Method List
@@ -58,6 +66,12 @@ To drag the icon on (50,50) to (200,300)
 - left_drag(sx,sy,ex,ey)
 
 - right_drag(sx,sy,ex,ey)
+
+- key_stroke
+
+- key_down
+
+- key_up
  
 == Tested with
 

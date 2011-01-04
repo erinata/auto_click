@@ -9,8 +9,12 @@ Gem::Specification.new do |s|
   s.authors     = ["erinata"]
   s.email       = ["erinata@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{Smulating mouse click and cursor movement}
-  s.description = %q{Provide several Ruby methods for simulating mouse click and cursor movement in Windows. This gem use DL library and SendInput method so there is no dependency on FFI, AutoIt or Win32-api. Currently contains 7 methods (mouse_move(x,y), left_click, right_click, cursor_position, mouse_scroll, left_drag and right drag). More control over mouse movement such as speed or locus will be implemented in future releases.}
+  s.summary     = %q{Smulating mouse click, cursor movement and keystrokes}
+  s.description = %q{Provide several Ruby methods for simulating mouse click, cursor movement and keystrokes in Windows. 
+                     This gem use DL library and SendInput method so there is no dependency on FFI, AutoIt or Win32-api. 
+                     Methods include mouse_move(x,y), left_click, right_click, cursor_position, mouse_scroll, key_up, key_down...etc.
+                     See https://github.com/erinata/auto_click for more details.
+                     (More control over mouse movement such as speed or locus will be implemented in future releases)}
   
   s.required_ruby_version = '>= 1.9.0'
 

@@ -392,7 +392,7 @@ module VirtualKey
       0xBE
     when :slash,:question,:questionmark,:forwardslash
       0xBF
-    when :tilde,
+    when :grave, :graveaccent, :tilde,:leftquote
       0xC0
     #when
     #  0xC1
@@ -448,11 +448,11 @@ module VirtualKey
     #  0xDA
     when :openbranket, :leftbranket, :opensquarebranket, :leftsquarebranket, :squarebranket 
       0xDB
-    when :pipe, :pipes, :backslash
+    when :pipe, :pipes, :bar, :brokenbar, :backslash
       0xDC
     when :closebranket, :closesquarebranket, :rightbranket, :rightsquarebranket
       0xDD
-    when :quote,:singlequote,:doublequote
+    when :quote,:singlequote,:doublequote, :rightquote
       0xDE
     #when
     #  0xDF

@@ -113,8 +113,84 @@ module AutoClick
         key_up(:leftshift)
       elsif ('0'..'9').include? c
         key_stroke(('num'+c).to_sym)
-      elsif c==" "
-        key_stroke(:space)
+      else
+        case c
+        when ' '
+          key_stroke(:space)
+        when ';'
+          key_stroke(:semicolon)
+        when ':'
+          key_down(:leftshift)
+          key_stroke(:semicolon)
+          key_up(:leftshift)
+        when '='
+          key_stroke(:equal)
+        when '+'
+          key_down(:leftshift)
+          key_stroke(:plus)
+          key_up(:leftshift)
+        when ','
+          key_stroke(:comma)
+        when '<'
+          key_down(:leftshift)
+          key_stroke(:smallerthan)
+          key_up(:leftshift)  
+        end
+        when '-'
+          key_stroke(:hyphen)
+        when '_'
+          key_down(:leftshift)
+          key_stroke(:underscore)
+          key_up(:leftshift)
+        when '.'
+          key_stroke(:period)
+        when '>'
+          key_down(:leftshift)
+          key_stroke(:greaterthan)
+          key_up(:leftshift)
+        when '/'
+          key_stroke(:slash)
+        when '?'
+          key_down(:leftshift)
+          key_stroke(:question)
+          key_up(:leftshift)
+        when '`'
+          key_stroke(:grave)
+        when '~'
+          key_down(:leftshift)
+          key_stroke(:tilde)
+          key_up(:leftshift)
+        when '/'
+          key_stroke(:slash)
+        when '?'
+          key_down(:leftshift)
+          key_stroke(:question)
+          key_up(:leftshift)  
+        when '['
+          key_stroke(:branket)
+        when '{'
+          key_down(:leftshift)
+          key_stroke(:branket)
+          key_up(:leftshift)
+        when ']'
+          key_stroke(:closebranket)
+        when '}'
+          key_down(:leftshift)
+          key_stroke(:closebranket)
+          key_up(:leftshift)
+        when '\\'
+          key_stroke(:backslash)
+        when '|'
+          key_down(:leftshift)
+          key_stroke(:pipe)
+          key_up(:leftshift)
+        when '\''
+          key_stroke(:quote)
+        when '"'
+          key_down(:leftshift)
+          key_stroke(:doublequote)
+          key_up(:leftshift)
+        end  
       end
     end
   end
@@ -136,13 +212,4 @@ end
 
 
 include AutoClick  # This line allow auto include when the user require the gem
-
-  
-
-
-
-
-
-
-
 

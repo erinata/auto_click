@@ -520,7 +520,8 @@ module VirtualKey
     #  0xFE
     #when
     #  0xFF
-    else 0  
+    else
+      0  
     end
   end
   

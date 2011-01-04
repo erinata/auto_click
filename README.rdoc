@@ -33,12 +33,52 @@ To scroll down (backward) 5 wheel steps:
   mouse_scroll(-5)
   
 To drag the icon on (50,50) to (200,300):
+
   left_drag(50,50,200,300)
  
-To send keystroke "a":
-  key_stroke("a")
- 
- 
+To send keystroke 'a':
+
+  key_stroke('a')
+
+To send keystroke tab:
+
+  key_stroke('tab')
+  
+Suppose the notepad window on the top left corner of the screen, to type "Auto Click" in notepad (assume that the capslock is off):
+
+  mouse_move(100,100)
+  leftclick            
+  key_down('shift')        
+  key_stroke('a')  
+  key_up('shift')
+  key_stroke('u')
+  key_stroke('t')
+  key_stroke('o')
+  key_stroke('space')
+  key_stroke('c')
+  key_stroke('l')
+  key_stroke('i')
+  key_stroke('c')
+  key_stroke('k')
+  
+Methods like get_windows("notepad") will be implemented in future release.
+Notice that 'a' means the key 'a' instead of the letter 'a'. Therefore key_stroke('a') and key_stroke('A') is basically the same. If the capslock is off but you want to type the capitalized A, you need to:
+
+  key_down('shift')        
+  key_stroke('a')  
+  key_up('shift')
+  
+A list of key stroke names will be included in the readme later. 'a' to 'z', 'num0' to 'num9', 'f1' to 'f12', 'shift' 'ctrl' 'alt' 'win' 'tab' 'del' 'ins' 'return' 'esc' 'pageup' 'pagedown' 'left' 'right' 'up' 'down' 'equal' 'hyphen'......etc are all acceptable key names.
+  
+If you know the virtual key code you can directly enter the key code, for example:
+
+  key_stroke(0x41)
+  
+is the same as
+
+  key_stroke('a')
+  
+  
 == Method List
 
 - left_click
@@ -49,17 +89,17 @@ To send keystroke "a":
 
 - mouse_move(x,y)
 
-- mouse_scroll(d)
+- mouse_scroll(step)
 
 - left_drag(sx,sy,ex,ey)
 
 - right_drag(sx,sy,ex,ey)
 
-- key_stroke
+- key_stroke(key_name)
 
-- key_down
+- key_down(key_name)
 
-- key_up
+- key_up(key_name)
  
  
 == Change log (for full change log please refer to the CHANGELOG file in the repository

@@ -1,3 +1,7 @@
+0.1.10
+implement type method
+implement get_key_state method
+refine the key_stroke, key_down and key_up method
 
 0.1.9
 Add support for keybaord region specific keys using US-keyboard standard

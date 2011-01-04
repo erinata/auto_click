@@ -103,7 +103,6 @@ module AutoClick
   
   def type(string)
     key_stroke(:capslock) if get_key_state(:capslock)==1
-    
     string=string.to_s
     string.each_char do |c|
       if ('a'..'z').include? c
@@ -114,6 +113,8 @@ module AutoClick
         key_up(:leftshift)
       elsif ('0'..'9').include? c
         key_stroke(('num'+c).to_sym)
+      elsif c==" "
+        key_stroke(:space)
       end
     end
   end
@@ -129,10 +130,8 @@ module AutoClick
     # When the cap key is down and the caplock is on the value is -127
     # When the cap key is down and the caplock is off the value is -128
     # When the cap key is Up and the caplock is on the value is 1
-    # When the cap key is Up and the caplock is off the value is 0
-   
+    # When the cap key is Up and the caplock is off the value is 0 
   end
-
 end
 
 

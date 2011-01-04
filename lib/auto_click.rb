@@ -177,19 +177,60 @@ module AutoClick
           key_down(:leftshift)
           key_stroke(:closebranket)
           key_up(:leftshift)
-        when '\\'
+        when '\\'   # You need to esapce \ in the parameter string
           key_stroke(:backslash)
         when '|'
           key_down(:leftshift)
           key_stroke(:pipe)
           key_up(:leftshift)
-        when '\''
+        when '\''   # escape ' only for single quote string
           key_stroke(:quote)
-        when '"'
+        when '"'    # escape " only for double quote string
           key_down(:leftshift)
           key_stroke(:doublequote)
           key_up(:leftshift)
-        end  
+        when '!'
+          key_down(:leftshift)
+          key_stroke(:num1)
+          key_up(:leftshift)
+        when '@'
+          key_down(:leftshift)
+          key_stroke(:num2)
+          key_up(:leftshift)  
+        when '#'    # The sharp sign need to be escape in single quote string
+          key_down(:leftshift)
+          key_stroke(:num3)
+          key_up(:leftshift)
+        when '$'
+          key_down(:leftshift)
+          key_stroke(:num4)
+          key_up(:leftshift)
+        when '%'
+          key_down(:leftshift)
+          key_stroke(:num5)
+          key_up(:leftshift)
+        when '^'
+          key_down(:leftshift)
+          key_stroke(:num6)
+          key_up(:leftshift)
+        when '&'
+          key_down(:leftshift)
+          key_stroke(:num7)
+          key_up(:leftshift)  
+        when '*'
+          key_down(:leftshift)
+          key_stroke(:num8)
+          key_up(:leftshift)
+        when '('
+          key_down(:leftshift)
+          key_stroke(:num9)
+          key_up(:leftshift)
+        when ')'
+          key_down(:leftshift)
+          key_stroke(:num0)
+          key_up(:leftshift)  
+        end
+        
       end
     end
   end

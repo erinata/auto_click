@@ -446,11 +446,11 @@ module VirtualKey
     #  0xD9
     #when
     #  0xDA
-    when :openbranket, :leftbranket, :opensquarebranket, :leftsquarebranket, :squarebranket 
+    when :branket, :openbranket, :leftbranket, :opensquarebranket, :leftsquarebranket, :squarebranket, :curlybranket, :opencurlybranket, :leftcurlybranket 
       0xDB
     when :pipe, :pipes, :bar, :brokenbar, :backslash
       0xDC
-    when :closebranket, :closesquarebranket, :rightbranket, :rightsquarebranket
+    when :closebranket, :closesquarebranket, :rightbranket, :rightsquarebranket, :closecurlybranket, :rightcurlybranket
       0xDD
     when :quote,:singlequote,:doublequote, :rightquote, :acute, :acuteaccent
       0xDE

@@ -135,7 +135,6 @@ module AutoClick
           key_down(:leftshift)
           key_stroke(:smallerthan)
           key_up(:leftshift)  
-        end
         when '-'
           key_stroke(:hyphen)
         when '_'

@@ -115,6 +115,11 @@ module AutoClick
       end
     end
   end
+  
+  def get_cap
+    puts User32.getKeyState(0x14)
+        
+  end
 
 end
 

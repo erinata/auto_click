@@ -1,13 +1,13 @@
 module VirtualKey
-  def self.code_from_string(string)
+  def self.code_from_name(name)
         
-    if string.kind_of? Fixnum
-      return string
-    elsif string.kind_of? String
-      string=string.delete('_').delete('-').delete(' ')
+    if name.kind_of? Fixnum
+      return name
+    elsif name.kind_of? String
+      name=name.delete('_').delete('-').delete(' ')
     end
-    string = string.to_sym.downcase  
-    case string
+    name = name.to_sym.downcase  
+    case name
     #when
     #  0x00S
     #when

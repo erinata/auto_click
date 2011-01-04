@@ -85,19 +85,19 @@ module AutoClick
     sleep 0.1
   end
   
-  def key_stroke(key)
-    code=VirtualKey.code_from_string(key)
+  def key_stroke(key_name)
+    code=VirtualKey.code_from_name(key_name)
     send_input([InputStructure.keyboard_input(code,0x0000),
                 InputStructure.keyboard_input(code,0x0002)])
   end
   
-  def key_down(key)
-    code=VirtualKey.code_from_string(key)
+  def key_down(key_name)
+    code=VirtualKey.code_from_name(key_name)
     send_input([InputStructure.keyboard_input(code,0x0000)])
   end
   
-  def key_up(key)
-    code=VirtualKey.code_from_string(key)
+  def key_up(key_name)
+    code=VirtualKey.code_from_name(key_name)
     send_input([InputStructure.keyboard_input(code,0x0002)])
   end
   

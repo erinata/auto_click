@@ -102,7 +102,18 @@ module AutoClick
   end
   
   def type(string)
-    puts string
+    string=string.to_s
+    string.each_char do |c|
+      if ('a'..'z').include? c
+        key_stroke(c.to_sym)
+      elsif ('A'..'Z').include? c
+        key_down(:leftshift)
+        key_stroke(c.to_sym)
+        key_up(:leftshift)
+      elsif ('0'..'9').include? c
+        key_stroke(('num'+c).to_sym)
+      end
+    end
   end
 
 end

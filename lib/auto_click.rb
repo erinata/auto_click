@@ -116,9 +116,19 @@ module AutoClick
     end
   end
   
-  def get_cap
-    puts User32.getKeyState(0x14)
-        
+  def get_key_state(key_name)
+    code=VirtualKey.code_from_name(key_name)
+    User32.GetKeyState(code)
+    # For normal keys
+    # When the key is down the value is -128
+    # When the key is up the value is 0
+     
+    # For toggle keys (such as capslock)  
+    # When the cap key is down and the caplock is on the value is -127
+    # When the cap key is down and the caplock is off the value is -128
+    # When the cap key is Up and the caplock is on the value is 1
+    # When the cap key is Up and the caplock is off the value is 0
+   
   end
 
 end

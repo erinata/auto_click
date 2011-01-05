@@ -1,5 +1,7 @@
+0.1.11
+super ugly implementation of that method type (need refactoring or even rewite later)
+
 0.1.10
-implement type method
 implement get_key_state method
 refine the key_stroke, key_down and key_up method
 

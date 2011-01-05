@@ -8,7 +8,31 @@ Smulating mouse click, cursor movement and keystrokes
 To install auto_click:
 
   gem install auto_click
-  
+
+== Method List
+
+- left_click
+
+- right_click
+
+- cursor_position
+
+- mouse_move(x,y)
+
+- mouse_scroll(step)
+
+- left_drag(sx,sy,ex,ey)
+
+- right_drag(sx,sy,ex,ey)
+
+- type(string)
+
+- key_stroke(key_name)
+
+- key_down(key_name)
+
+- key_up(key_name)
+
 == Usage
 
 To use the methods provided by auto_click. You need to require it.
@@ -37,6 +61,24 @@ To drag the icon on (50,50) to (200,300):
 
   left_drag(50,50,200,300)
  
+Suppose the notepad window on the top left corner of the screen, to type "Auto Click" in notepad. (Methods like get_windows("notepad") will be implemented in future release. So that you do not need to use this left click things to get focus on the notepad window......in later release......) 
+
+  mouse_move(100,100)
+  leftclick
+  type('Auto Click')                
+  
+The type method will Send keystroke for every characters of the strings. It will ensure that the capslock is off and hold shift when it is typing a capital character. 
+Notice that you need to escape the character \ and ' in single quote string, and you need to escape \  " and # in double quote string.
+For example, to type #''\ , you can either do:
+
+  type('#\'\'\\')
+  
+or
+    
+  type("\#''\\)
+  
+To get more refine control of key stroke simulation, you can use the method key_stroke, key_up and key_down methods
+
 To send keystroke 'a':
 
   key_stroke('a')
@@ -44,11 +86,9 @@ To send keystroke 'a':
 To send keystroke tab:
 
   key_stroke('tab')
-  
-Suppose the notepad window on the top left corner of the screen, to type "Auto Click" in notepad (assume that the capslock is off):
 
-  mouse_move(100,100)
-  leftclick            
+Therefore, to type "Auto Click" , you can either use the type method stated before, or you can do:
+
   key_down('shift')        
   key_stroke('a')  
   key_up('shift')
@@ -62,7 +102,7 @@ Suppose the notepad window on the top left corner of the screen, to type "Auto C
   key_stroke('c')
   key_stroke('k')
   
-Methods like get_windows("notepad") will be implemented in future release.
+
 Notice that 'a' means the key 'a' instead of the letter 'a'. Therefore key_stroke('a') and key_stroke('A') are basically the same. If the capslock is off but you want to type the capitalized A, you need to:
 
   key_down('shift')        
@@ -80,31 +120,14 @@ is the same as
   key_stroke('a')
   
   
-== Method List
-
-- left_click
-
-- right_click
-
-- cursor_position
-
-- mouse_move(x,y)
-
-- mouse_scroll(step)
-
-- left_drag(sx,sy,ex,ey)
-
-- right_drag(sx,sy,ex,ey)
-
-- key_stroke(key_name)
-
-- key_down(key_name)
-
-- key_up(key_name)
  
  
 == Change log 
-(for full change log please refer to the CHANGELOG file in the repository
+(for full change log please refer to the CHANGELOG file in the repository)
+
+- 0.1.11 Super ugly implementation of that method type (need refactoring or even rewite later)
+
+- 0.1.10 Implement get_key_state method. Refine the key_stroke, key_down and key_up method
 
 - 0.1.9 Add support for keybaord region specific keys using US-keyboard standard
 

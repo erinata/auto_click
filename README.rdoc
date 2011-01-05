@@ -67,7 +67,7 @@ Suppose the notepad window on the top left corner of the screen, to type "Auto C
   leftclick
   type('Auto Click')                
   
-The type method will Send keystroke for every characters of the strings. It will ensure that the capslock is off and hold shift when it is typing a capital character. 
+The type method will Send keystroke for every characters of the string. It will ensure that the capslock is off and hold shift when it is typing a capital character. 
 Notice that you need to escape the character \ and ' in single quote string, and you need to escape \  " and # in double quote string.
 For example, to type #''\ , you can either do:
 
@@ -75,7 +75,7 @@ For example, to type #''\ , you can either do:
   
 or
     
-  type("\#''\\)
+  type("\#''\\")
   
 To get more refine control of key stroke simulation, you can use the method key_stroke, key_up and key_down methods
 

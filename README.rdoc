@@ -125,7 +125,7 @@ is the same as
 == Change log 
 (for full change log please refer to the CHANGELOG file in the repository)
 
-- 0.1.11 Super ugly implementation of that method type (need refactoring or even rewite later)
+- 0.1.12 Super ugly implementation of that method type (need refactoring or even rewite later)
 
 - 0.1.10 Implement get_key_state method. Refine the key_stroke, key_down and key_up method
 

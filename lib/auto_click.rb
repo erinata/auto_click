@@ -66,6 +66,7 @@ module AutoClick
       send_input( [@@middledown] )  
     else
       send_input( [@@leftdown] )
+    end
   end
   
   def mouse_up(keyname)
@@ -76,6 +77,7 @@ module AutoClick
       send_input( [@@middleup] )  
     else
       send_input( [@@leftup] )
+    end
   end  
   
   def double_click

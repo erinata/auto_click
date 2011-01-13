@@ -1,6 +1,5 @@
 = AutoClick
 
-
 Smulating mouse click, cursor movement and keystrokes
 
 == Install
@@ -9,45 +8,21 @@ To install auto_click:
 
   gem install auto_click
 
-== Method List
+== Basic Usage
 
-- left_click
-
-- right_click
-
-- cursor_position
-
-- mouse_move(x,y)
-
-- mouse_scroll(step)
-
-- left_drag(sx,sy,ex,ey)
-
-- right_drag(sx,sy,ex,ey)
-
-- type(string)
-
-- key_stroke(key_name)
-
-- key_down(key_name)
-
-- key_up(key_name)
-
-== Usage
-
-To use the methods provided by auto_click. You need to require it.
+Using auto_click is easy. To use the methods provided by auto_click. You need to require it.
 
   require 'auto_click'
 
 To move the mouse cursor to 50,50 ( the top left corner is 0,0) and perform a double left click:
 
   mouse_move(50,50)
-  left_click
-  left_click
-  
-To show the current cursor position:
+  double_click
 
-  puts cursor_position
+To move the mouse cursor to 300,300 and perform a right click:
+
+  mouse_move(50,50)
+  right_click
   
 To scroll up (forward) 10 wheel steps:
   
@@ -76,7 +51,23 @@ For example, to type #''\ , you can either do:
 or
     
   type("\#''\\")
+
+== Advanced Usage
+
+The methods shown in Basic Usage is convenient, but sometimes you may need more control on your mouse action and key strokes.
+
+To show the current cursor position:
+
+  puts cursor_position
   
+If you wish to left click and hold:
+  
+  mouse_down(:left)
+  
+And remember to release the button later:
+
+  mouse_up(:left)
+    
 To get more refine control of key stroke simulation, you can use the method key_stroke, key_up and key_down methods
 
 To send keystroke 'a':
@@ -87,7 +78,7 @@ To send keystroke tab:
 
   key_stroke('tab')
 
-Therefore, to type "Auto Click" , you can either use the type method stated before, or you can do:
+Therefore, to type "Auto Click" , you can either use the simple type method stated basic usage section, or you can do:
 
   key_down('shift')        
   key_stroke('a')  
@@ -104,6 +95,7 @@ Therefore, to type "Auto Click" , you can either use the type method stated befo
   key_stroke('c')
   key_stroke('k')
   
+And you can have detail adjustments to the keyboard behaviour that you need.
 
 Notice that 'a' means the key 'a' instead of the letter 'a'. Therefore key_stroke('a') and key_stroke('A') are basically the same. If the capslock is off but you want to type the capitalized A, you need to:
 
@@ -121,11 +113,58 @@ is the same as
 
   key_stroke('a')
   
+To perform a double_click, instead of using
+
+  double_click
+
+You can use two click calls
+
+  left_click
+  left_click
   
- 
- 
+And of course if for some reasons you need double middle mouse click, you can:
+
+  middle_click
+  middle_click
+
+There are some methods which is not discussed here. Please see the following Method List for all the available methods.
+
+== Method List
+
+- left_click
+
+- right_click
+
+- middle_click
+
+- double_click
+
+- mouse_down(button_name)
+
+- cursor_position
+
+- mouse_move(x,y)
+
+- mouse_scroll(step)
+
+- left_drag(x_start,y_start,x_end,y_end)
+
+- right_drag(x_start,y_start,x_end,y_end)
+
+- type(string)
+
+- key_stroke(key_name)
+
+- key_down(key_name)
+
+- key_up(key_name)
+
 == Change log 
 (for full change log please refer to the CHANGELOG file in the repository)
+
+- 0.1.15 Add more general mouse control methods: mouse_down(keyname), mouse_up(keyname)
+
+- 0.1.14 Add middle_click and double_click
 
 - 0.1.12 Super ugly implementation of that method type (need refactoring or even rewite later)
 
@@ -138,7 +177,6 @@ is the same as
 - 0.1.7 Primitive implementation of key_stroke. Need good api before putting it into method list
 
 - 0.1.4 Implement left_drag and right_drag
-
  
 == Tested with
 

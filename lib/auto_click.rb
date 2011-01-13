@@ -58,8 +58,8 @@ module AutoClick
     send_input( [@@middledown, @@middleup] )
   end
   
-  def mouse_down(keyname)
-    case keyname
+  def mouse_down(button_name)
+    case button_name
     when :right
       send_input( [@@rightdown] )
     when :middle
@@ -69,8 +69,8 @@ module AutoClick
     end
   end
   
-  def mouse_up(keyname)
-    case keyname
+  def mouse_up(button_name)
+    case button_name
     when :right
       send_input( [@@rightup] )
     when :middle

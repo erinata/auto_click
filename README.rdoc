@@ -127,7 +127,7 @@ And of course if for some reasons you need double middle mouse click, you can:
   middle_click
   middle_click
 
-There are some methods which is not discussed here. Please see the following Method List for all the available methods.
+There are some methods which are not discussed here. Please see the following Method List for all the available methods.
 
 == Method List
 
@@ -190,7 +190,7 @@ There are some methods which is not discussed here. Please see the following Met
 
 MIT license
 
-Copyright (C) 2010 by Tom Lam
+Copyright (C) 2010-2011 by Tom Lam
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

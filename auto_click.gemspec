@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Smulating mouse click, cursor movement and keystrokes}
   s.description = %q{Provide several Ruby methods for simulating mouse click, cursor movement and keystrokes in Windows. 
                      This gem use DL library and SendInput method so there is no dependency on FFI, AutoIt or Win32-api. 
-                     Methods include mouse_move(x,y), left_click, right_click, mouse_scroll, type, key_up, key_down...etc.
+                     Methods include mouse_move(x,y), left_click, right_click, type(string), mouse_scroll(steps), key_up, key_down...etc.
                      See https://github.com/erinata/auto_click for more details about instalation and usage.
                      (More control over mouse movement such as speed or locus will be implemented in future releases)}
   

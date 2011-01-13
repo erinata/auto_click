@@ -56,9 +56,14 @@ or
 
 The methods shown in Basic Usage are convenient, but sometimes you may need more control on your mouse actions and key strokes.
 
-To show the current cursor position:
+To show the current cursor x and y position in pixels:
 
-  puts cursor_position
+  puts cursor_position[0]
+  puts cursor_position[1]
+ 
+To move the mouse cursor downward 300 pixels
+  
+  mouse_move(cursor_position[0]+300,cursor_position[1])  # I know this is not efficient but later I will implement a mouse_move relative method.
  
 If you wish to left click and hold:
   
@@ -82,7 +87,7 @@ And of course if for some reasons you need double middle mouse click, you can:
   middle_click
   middle_click
 
-To get more refined control to key strokes simulation, you can use the method key_stroke, key_up and key_down methods
+For get more refined control to key strokes simulation, you can use the method key_stroke, key_up and key_down methods
 
 To send keystroke 'a':
 

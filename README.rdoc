@@ -54,7 +54,7 @@ or
 
 == Advanced Usage
 
-The methods shown in Basic Usage is convenient, but sometimes you may need more control on your mouse action and key strokes.
+The methods shown in Basic Usage are convenient, but sometimes you may need more control on your mouse actions and key strokes.
 
 To show the current cursor position:
 
@@ -178,7 +178,7 @@ There are some methods which are not discussed here. Please see the following Me
 
 - 0.1.14 Add middle_click and double_click
 
-- 0.1.12 Super ugly implementation of that method type (need refactoring or even rewite later)
+- 0.1.12 Super ugly implementation of the method type (need refactoring or even rewite later)
 
 - 0.1.10 Implement get_key_state method. Refine the key_stroke, key_down and key_up method
 

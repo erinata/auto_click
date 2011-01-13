@@ -5,7 +5,7 @@ Add more general mouse control methods: mouse_down(button_name), mouse_up(button
 Add middle_click and double_click
 
 0.1.12
-super ugly implementation of that method type (need refactoring or even rewite later)
+super ugly implementation of the method type (need refactoring or even rewite later)
 
 0.1.10
 implement get_key_state method

@@ -67,7 +67,21 @@ If you wish to left click and hold:
 And remember to release the button later:
 
   mouse_up(:left)
-    
+
+To perform a double_click, instead of using:
+
+  double_click
+
+You can use two click calls:
+
+  left_click
+  left_click
+  
+And of course if for some reasons you need double middle mouse click, you can:
+
+  middle_click
+  middle_click
+
 To get more refined control to key strokes simulation, you can use the method key_stroke, key_up and key_down methods
 
 To send keystroke 'a':
@@ -123,22 +137,8 @@ is the same as
 
   key_stroke('a')
   
-To perform a double_click, instead of using
-
-  double_click
-
-You can use two click calls
-
-  left_click
-  left_click
+The list of virtual key codes can be found at http://msdn.microsoft.com/en-us/library/dd375731(v=vs.85).aspx
   
-And of course if for some reasons you need double middle mouse click, you can:
-
-  middle_click
-  middle_click
-
-
-
 There are some methods which are not discussed here. Please see the following Method List for all the available methods.
 
 == Method List

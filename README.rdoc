@@ -40,9 +40,9 @@ Suppose the notepad window on the top left corner of the screen, to type "Auto C
 
   mouse_move(100,100)
   leftclick
-  type('Auto Click')                
+  type('Auto Click!')                
   
-The type method will Send keystroke for every characters of the string. It will ensure that the capslock is off and hold shift when it is typing a capital character. 
+The type method will Send keystroke for every characters of the string. It will ensure that the capslock is off and hold shift when it is typing a capital character or a character that need shift down (e.g. '!').
 Notice that you need to escape the character \ and ' in single quote string, and you need to escape \  " and # in double quote string.
 For example, to type #''\ , you can either do:
 
@@ -59,7 +59,7 @@ The methods shown in Basic Usage is convenient, but sometimes you may need more 
 To show the current cursor position:
 
   puts cursor_position
-  
+ 
 If you wish to left click and hold:
   
   mouse_down(:left)
@@ -78,7 +78,7 @@ To send keystroke tab:
 
   key_stroke('tab')
 
-Therefore, to type "Auto Click" , you can either use the simple type method stated basic usage section, or you can do:
+Therefore, to type "Auto Click!" , you can either use the simple type method stated basic usage section, or you can do:
 
   key_down('shift')        
   key_stroke('a')  
@@ -94,6 +94,9 @@ Therefore, to type "Auto Click" , you can either use the simple type method stat
   key_stroke('i')
   key_stroke('c')
   key_stroke('k')
+  key_down('shift')
+  key_stroke('num1')
+  key_up('shift')
   
 And you can have detail adjustments to the keyboard behaviour that you need.
 
@@ -134,6 +137,8 @@ And of course if for some reasons you need double middle mouse click, you can:
   middle_click
   middle_click
 
+
+
 There are some methods which are not discussed here. Please see the following Method List for all the available methods.
 
 == Method List
@@ -169,7 +174,7 @@ There are some methods which are not discussed here. Please see the following Me
 == Change log 
 (for full change log please refer to the CHANGELOG file in the repository)
 
-- 0.1.15 Add more general mouse control methods: mouse_down(keyname), mouse_up(keyname)
+- 0.1.15 Add more general mouse control methods: mouse_down(button_name), mouse_up(button_name)
 
 - 0.1.14 Add middle_click and double_click
 

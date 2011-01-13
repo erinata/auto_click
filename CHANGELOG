@@ -1,5 +1,5 @@
 0.1.15
-Add more general mouse control methods: mouse_down(keyname), mouse_up(keyname)
+Add more general mouse control methods: mouse_down(button_name), mouse_up(button_name)
 
 0.1.14   
 Add middle_click and double_click

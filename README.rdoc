@@ -68,7 +68,7 @@ And remember to release the button later:
 
   mouse_up(:left)
     
-To get more refine control of key stroke simulation, you can use the method key_stroke, key_up and key_down methods
+To get more refined control to key strokes simulation, you can use the method key_stroke, key_up and key_down methods
 
 To send keystroke 'a':
 
@@ -104,6 +104,13 @@ Notice that 'a' means the key 'a' instead of the letter 'a'. Therefore key_strok
   key_up('shift')
   
 A list of key stroke names will be included in the readme later. 'a' to 'z', 'num0' to 'num9', 'f1' to 'f12', 'shift' 'ctrl' 'alt' 'win' 'tab' 'del' 'ins' 'return' 'esc' 'pageup' 'pagedown' 'left' 'right' 'up' 'down' 'equal' 'hyphen'......etc are all acceptable key names.
+I am trying to cater a certain number of name variations, for example:
+
+  key_stroke('left') 
+  key_stroke('leftarrow')
+  key_stroke('leftkey')
+  
+will do the same thing. 
   
 If you know the virtual key code you can directly enter the key code, for example:
 

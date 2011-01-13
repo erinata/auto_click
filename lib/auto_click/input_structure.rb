@@ -10,7 +10,6 @@ module InputStructure
     mi.pack('LLLLLLL')
   end
   
-  
   def self.keyboard_input(wVk,dw_flags)
     ki = Array.new(7, 0)
     ki[0] = 1
@@ -18,7 +17,6 @@ module InputStructure
     ki[2] = dw_flags
     ki.pack('LLLLLLL')
   end
-
   
   
 end

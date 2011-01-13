@@ -1,4 +1,8 @@
-0.1.13
+0.1.15
+Add more general mouse control methods: mouse_down(keyname), mouse_up(keyname)
+
+0.1.14   
+Add middle_click and double_click
 
 0.1.12
 super ugly implementation of that method type (need refactoring or even rewite later)

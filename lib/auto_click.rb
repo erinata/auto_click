@@ -9,6 +9,8 @@ module AutoClick
   @@rightup = InputStructure.mouse_input(0,0,0,0x0010)  
   @@leftdown = InputStructure.mouse_input(0,0,0,0x0002)
   @@leftup = InputStructure.mouse_input(0,0,0,0x0004)
+  @@middledown = InputStructure.mouse_input(0,0,0,0x0020)
+  @@middleup = InputStructure.mouse_input(0,0,0,0x0040)
     
   def send_input(inputs)
     n = inputs.size
@@ -50,6 +52,35 @@ module AutoClick
   
   def left_click
     send_input( [@@leftdown, @@leftup] )
+  end
+  
+  def middle_click
+    send_input( [@@middledown, @@middleup] )
+  end
+  
+  def mouse_down(keyname)
+    case keyname
+    when :right
+      send_input( [@@rightdown] )
+    when :middle
+      send_input( [@@middledown] )  
+    else
+      send_input( [@@leftdown] )
+  end
+  
+  def mouse_up(keyname)
+    case keyname
+    when :right
+      send_input( [@@rightup] )
+    when :middle
+      send_input( [@@middleup] )  
+    else
+      send_input( [@@leftup] )
+  end  
+  
+  def double_click
+    left_click
+    left_click
   end
   
   def cursor_position

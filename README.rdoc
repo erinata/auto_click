@@ -63,7 +63,9 @@ To show the current cursor x and y position in pixels:
  
 To move the mouse cursor downward 300 pixels
   
-  mouse_move(cursor_position[0]+300,cursor_position[1])  # I know this is not efficient but later I will implement a mouse_move relative method.
+  mouse_move(cursor_position[0]+300,cursor_position[1])  
+
+Yes this is not very efficient but mouse_move_relative methods will be implemented in later releases.
  
 If you wish to left click and hold:
   
@@ -157,6 +159,8 @@ There are some methods which are not discussed here. Please see the following Me
 - double_click
 
 - mouse_down(button_name)
+
+- mouse_up(button_name)
 
 - cursor_position
 

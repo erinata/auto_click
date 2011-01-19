@@ -180,6 +180,16 @@ There are some methods which are not discussed here. Please see the following Me
 
 - key_up(key_name)
 
+== To Do List
+
+- Add options of movement speed of mouse so the cursor is actually "moving" instead of just show up at the destination instantly
+
+- GetWindow and GetWindowFocus Method
+
+- Refactor the ugly type(string) method
+
+- More effective way to move mouse relative to current position
+
 == Change log 
 (for full change log please refer to the CHANGELOG file in the repository)
 

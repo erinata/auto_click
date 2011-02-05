@@ -2,7 +2,7 @@ require 'dl/import'
 require 'auto_click/input_structure'
 require 'auto_click/virtual_key'
 require 'auto_click/user32'
-
+ 
 module AutoClick
   
   @@rightdown = InputStructure.mouse_input(0,0,0,0x0008)
@@ -15,7 +15,7 @@ module AutoClick
   def send_input(inputs)
     n = inputs.size
     ptr = inputs.collect {|i| i.to_s}.join
-    User32.SendInput(n, ptr, inputs[0].size)
+    User32.SendInput(n, ptr, inputs[0].size)    
   end
 
   def mouse_move(x,y)

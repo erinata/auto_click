@@ -2,16 +2,15 @@ require 'dl/import'
 require 'auto_click/input_structure'
 require 'auto_click/virtual_key'
 require 'auto_click/user32'
- 
+
 module AutoClick
-  
   @@rightdown = InputStructure.mouse_input(0,0,0,0x0008)
   @@rightup = InputStructure.mouse_input(0,0,0,0x0010)  
   @@leftdown = InputStructure.mouse_input(0,0,0,0x0002)
   @@leftup = InputStructure.mouse_input(0,0,0,0x0004)
   @@middledown = InputStructure.mouse_input(0,0,0,0x0020)
   @@middleup = InputStructure.mouse_input(0,0,0,0x0040)
-    
+  
   def send_input(inputs)
     n = inputs.size
     ptr = inputs.collect {|i| i.to_s}.join

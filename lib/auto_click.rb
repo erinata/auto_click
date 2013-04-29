@@ -11,6 +11,7 @@ module AutoClick
   @@middledown = InputStructure.mouse_input(0,0,0,0x0020)
   @@middleup = InputStructure.mouse_input(0,0,0,0x0040)
   
+  
   def send_input(inputs)
     n = inputs.size
     ptr = inputs.collect {|i| i.to_s}.join
@@ -95,6 +96,7 @@ module AutoClick
     send_input( [scroll])
   end
   
+
   def left_drag(sx,sy,ex,ey)
     mouse_move sx,sy
     sleep 0.1

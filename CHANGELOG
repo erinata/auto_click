@@ -1,3 +1,6 @@
+0.2.0
+bump verison
+
 0.1.15
 Add more general mouse control methods: mouse_down(button_name), mouse_up(button_name)
 

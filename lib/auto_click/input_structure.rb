@@ -18,5 +18,4 @@ module InputStructure
     ki.pack('LLLLLLL')
   end
   
-  
 end

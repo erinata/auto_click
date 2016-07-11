@@ -19,7 +19,7 @@ To move the mouse cursor to 50,50 ( the top left corner is 0,0) and perform a do
   mouse_move(50,50)
   double_click
 
-To move the mouse cursor to 300,300 and perform a right click:
+To move the mouse cursor to 50,50 and perform a right click:
 
   mouse_move(50,50)
   right_click
@@ -32,7 +32,13 @@ To scroll down (backward) 5 wheel steps:
   
   mouse_scroll(-5)
   
+To get the current cursor position  
+  
+  cursor_position
+  
 To drag the icon on (50,50) to (200,300):
+  
+  
 
   left_drag(50,50,200,300)
  

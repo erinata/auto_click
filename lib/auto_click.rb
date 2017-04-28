@@ -1,4 +1,4 @@
-require 'dl/import'
+require 'fiddle/import'
 require 'auto_click/input_structure'
 require 'auto_click/virtual_key'
 require 'auto_click/user32'

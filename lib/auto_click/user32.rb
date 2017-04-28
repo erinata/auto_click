@@ -1,5 +1,5 @@
 module User32
-  extend DL::Importer
+  extend Fiddle::Importer
   dlload 'user32'
   extern "int GetCursorPos(char*)"
   extern "int SetCursorPos(int,int)"

@@ -194,7 +194,9 @@ There are some methods which are not discussed here. Please see the following Me
 
 - GetWindow and GetWindowFocus Method
 
-- Refactor the ugly type(string) method
+- Refactor the ugly type(string) method 
+
+- Use code block to implement modifier keys
 
 - More effective way to move mouse relative to current position
 

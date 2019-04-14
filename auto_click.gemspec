@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
                      See https://github.com/erinata/auto_click for more details about instalation and usage.
                      (More control over mouse movement such as speed or locus will be implemented in future releases)}
   
-  s.required_ruby_version = '>= 1.9.0'
+  s.required_ruby_version = '>= 2.3.0'
   
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

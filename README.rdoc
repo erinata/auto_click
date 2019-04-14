@@ -188,6 +188,8 @@ There are some methods which are not discussed here. Please see the following Me
 
 == To Do List
 
+- Backward compatibility with 32-bit ruby
+
 - Add options of movement speed of mouse so the cursor is actually "moving" instead of just show up at the destination instantly
 
 - GetWindow and GetWindowFocus Method

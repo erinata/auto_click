@@ -7,7 +7,7 @@ module InputStructure
     mi[2] = dy
     mi[3] = mouse_data
     mi[4] = dw_flags
-    mi.pack('LLLLLLL')
+    mi.pack('QLLLLQQ')
   end
   
   def self.keyboard_input(wVk,dw_flags)
@@ -15,7 +15,7 @@ module InputStructure
     ki[0] = 1
     ki[1] = wVk
     ki[2] = dw_flags
-    ki.pack('LLLLLLL')
+    ki.pack('QLLLLQQ')
   end
   
 end

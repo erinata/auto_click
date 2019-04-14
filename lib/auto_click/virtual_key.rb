@@ -1,7 +1,7 @@
 module VirtualKey
   def self.code_from_name(name)
 
-    if name.kind_of? Fixnum!
+    if name.kind_of? Fixnum
       return name
     elsif name.kind_of? String
       name=name.delete('_').delete('-').delete(' ')

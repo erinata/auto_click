@@ -199,6 +199,12 @@ There are some methods which are not discussed here. Please see the following Me
 == Change log 
 (for full change log please refer to the CHANGELOG file in the repository)
 
+- 0.4.0 Fix the 64bit bug and Fixnum! bug
+
+- 0.3.0 Update to use DL Library
+
+- 0.2.0 bump verison
+
 - 0.1.15 Add more general mouse control methods: mouse_down(button_name), mouse_up(button_name)
 
 - 0.1.14 Add middle_click and double_click
@@ -214,20 +220,12 @@ There are some methods which are not discussed here. Please see the following Me
 - 0.1.7 Primitive implementation of key_stroke. Need good api before putting it into method list
 
 - 0.1.4 Implement left_drag and right_drag
- 
-== Tested with
-
-- Ruby 1.9.1-p430, Windows 7
-
-- Ruby 1.9.2-p0, Windows 7
-
-- Ruby 1.9.2-p136, Windows 7
   
 == License
 
 MIT license
 
-Copyright (C) 2010-2011 by Tom Lam
+Copyright (C) 2010-2019 by Chungsang Tom Lam
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

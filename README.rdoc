@@ -10,9 +10,10 @@ To install auto_click:
 
 == Basic Usage
 
-Using auto_click is easy. To use the methods provided by auto_click. You need to require it.
+Using auto_click is easy. To use the methods provided by auto_click. You need to require the gem and include the module:
 
   require 'auto_click'
+  Include AutoClick
 
 To move the mouse cursor to 50,50 ( the top left corner is 0,0) and perform a double left click:
 

@@ -294,5 +294,5 @@ module AutoClick
 end
 
 
-include AutoClick  # This line allow auto include when the user require the gem
+# include AutoClick  # This line allow auto include when the user require the gem
 

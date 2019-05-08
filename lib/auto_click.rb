@@ -10,10 +10,6 @@ module AutoClick
   @@leftup = InputStructure.mouse_input(0,0,0,0x0004)
   @@middledown = InputStructure.mouse_input(0,0,0,0x0020)
   @@middleup = InputStructure.mouse_input(0,0,0,0x0040)
-  
-  
-
-
 
 
   def send_input(inputs)
@@ -22,37 +18,42 @@ module AutoClick
     User32.SendInput(n, ptr, inputs[0].size)    
   end
 
-  def mouse_move(x,y)
-    User32.SetCursorPos(x,y)
-  end
-  
-  def mouse_move_pixel_absolute(x,y)
-    User32.SetCursorPos(x,y)
-  end
-  
-  def mouse_move_percentage_relative_virtual(x,y) # broken
-    move = InputStructure.mouse_input(x,y,0,0x0001)
-    send_input( [move])
-  end
-  
-  def mouse_move_percentage_relative_real(x,y)  # broken
-    move = InputStructure.mouse_input(x,y,0,0x4001)
-    send_input( [move])
-  end
-  
-  def mouse_move_percentage_absolute_virtual(x,y)
-    move = InputStructure.mouse_input(x*65536,y*65536,0,0xc001)
-    send_input( [move])
-  end
-  
-  def mouse_move_percentage_absolute_real(x,y)
-    move = InputStructure.mouse_input(x*65536,y*65536,0,0x8001)
-    send_input( [move])
-  end
-
   def get_screen_resolution
     [User32.GetSystemMetrics(0), User32.GetSystemMetrics(1)]
   end
+
+  def mouse_move(x,y)
+    User32.SetCursorPos(x,y)
+  end
+
+  def mouse_move_percentage(x,y)
+    screen_resolution = get_screen_resolution()
+    User32.SetCursorPos(get_screen_resolution[0]*x,get_screen_resolution[1]*y)
+  end
+  
+  # def mouse_move_pixel_absolute(x,y)
+  #   User32.SetCursorPos(x,y)
+  # end
+  
+  # def mouse_move_percentage_relative_virtual(x,y) # broken
+  #   move = InputStructure.mouse_input(x,y,0,0x0001)
+  #   send_input( [move])
+  # end
+  
+  # def mouse_move_percentage_relative_real(x,y)  # broken
+  #   move = InputStructure.mouse_input(x,y,0,0x4001)
+  #   send_input( [move])
+  # end
+  
+  # def mouse_move_percentage_absolute_virtual(x,y)
+  #   move = InputStructure.mouse_input(x*65536,y*65536,0,0xc001)
+  #   send_input( [move])
+  # end
+  
+  # def mouse_move_percentage_absolute_real(x,y)
+  #   move = InputStructure.mouse_input(x*65536,y*65536,0,0x8001)
+  #   send_input( [move])
+  # end
     
   def right_click
     send_input( [@@rightdown, @@rightup] )

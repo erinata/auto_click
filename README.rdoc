@@ -23,6 +23,10 @@ To move the mouse cursor to 50,50 and perform a right click:
 
   mouse_move(50,50)
   right_click
+
+To move the mouse cursor to the middle of the screen:
+  
+  mouse_move_percentage(0.5,0.5)
   
 To scroll up (forward) 10 wheel steps:
   
@@ -38,8 +42,6 @@ To get the current cursor position
   
 To drag the icon on (50,50) to (200,300):
   
-  
-
   left_drag(50,50,200,300)
  
 Suppose the notepad window on the top left corner of the screen, to type "Auto Click" in notepad. (Methods like get_windows("notepad") will be implemented in future release. So that you do not need to use this left click things to get focus on the notepad window......in later release......) 
@@ -172,6 +174,8 @@ There are some methods which are not discussed here. Please see the following Me
 
 - mouse_move(x,y)
 
+- mouse_move_percentage(x_percent,y_percent)
+
 - mouse_scroll(step)
 
 - left_drag(x_start,y_start,x_end,y_end)
@@ -203,27 +207,12 @@ There are some methods which are not discussed here. Please see the following Me
 == Change log 
 (for full change log please refer to the CHANGELOG file in the repository)
 
+- 0.4.3 Add mouse_move_percentage and get_screen_resolution
+
 - 0.4.0 Fix the 64bit bug and Fixnum! bug
 
 - 0.3.0 Update to use DL Library
 
-- 0.2.0 bump verison
-
-- 0.1.15 Add more general mouse control methods: mouse_down(button_name), mouse_up(button_name)
-
-- 0.1.14 Add middle_click and double_click
-
-- 0.1.12 Super ugly implementation of the method type (need refactoring or even rewite later)
-
-- 0.1.10 Implement get_key_state method. Refine the key_stroke, key_down and key_up method
-
-- 0.1.9 Add support for keybaord region specific keys using US-keyboard standard
-
-- 0.1.8 Implement key_stroke, key_down and key_up
-
-- 0.1.7 Primitive implementation of key_stroke. Need good api before putting it into method list
-
-- 0.1.4 Implement left_drag and right_drag
   
 == License
 

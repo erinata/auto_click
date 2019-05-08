@@ -13,7 +13,7 @@ To install auto_click:
 Using auto_click is easy. To use the methods provided by auto_click. You need to require the gem and include the module:
 
   require 'auto_click'
-  Include AutoClick
+  Include AutoClickMethods
 
 To move the mouse cursor to 50,50 ( the top left corner is 0,0) and perform a double left click:
 
@@ -156,6 +156,18 @@ is the same as
 The list of virtual key codes can be found at http://msdn.microsoft.com/en-us/library/dd375731(v=vs.85).aspx
   
 There are some methods which are not discussed here. Please see the following Method List for all the available methods.
+
+Finally, if you do not want include the auto_click methods, instead of using
+
+  include AutoClickMethods
+
+you can construct a new instance of AutoClick and involve the methods as class methods
+
+  ac = AutoClick.new()
+  ac.mouse_move(50,50)
+
+
+
 
 == Method List
 

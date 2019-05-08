@@ -3,7 +3,7 @@ require 'auto_click/input_structure'
 require 'auto_click/virtual_key'
 require 'auto_click/user32'
 
-module AutoClick
+module AutoClickMethods
   @@rightdown = InputStructure.mouse_input(0,0,0,0x0008)
   @@rightup = InputStructure.mouse_input(0,0,0,0x0010)  
   @@leftdown = InputStructure.mouse_input(0,0,0,0x0002)
@@ -295,4 +295,9 @@ end
 
 
 # include AutoClick  # This line allow auto include when the user require the gem
+
+class AutoClick
+  include AutoClickMethods
+end
+
 

@@ -1,7 +1,8 @@
 
 
-0.4.3 
+0.5.0 
 Add mouse_move_percentage and get_screen_resolution
+Autoclick will not include the methods automatically
 
 0.4.0
 Fix the 64bit bug and Fixnum! bug

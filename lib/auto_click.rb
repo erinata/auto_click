@@ -12,6 +12,10 @@ module AutoClick
   @@middleup = InputStructure.mouse_input(0,0,0,0x0040)
   
   
+
+
+
+
   def send_input(inputs)
     n = inputs.size
     ptr = inputs.collect {|i| i.to_s}.join
@@ -44,6 +48,10 @@ module AutoClick
   def mouse_move_percentage_absolute_real(x,y)
     move = InputStructure.mouse_input(x*65536,y*65536,0,0x8001)
     send_input( [move])
+  end
+
+  def get_screen_resolution
+    [User32.GetSystemMetrics(0), User32.GetSystemMetrics(1)]
   end
     
   def right_click

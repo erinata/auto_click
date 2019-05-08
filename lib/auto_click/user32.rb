@@ -5,4 +5,5 @@ module User32
   extern "int SetCursorPos(int,int)"
   extern "int SendInput(int,char*,int)"
   extern "int GetKeyState(int)"
+  extern "int GetSystemMetrics(int)"
 end

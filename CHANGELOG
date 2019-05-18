@@ -3,6 +3,7 @@
 0.5.0 
 Add mouse_move_percentage and get_screen_resolution
 Autoclick will not include the methods automatically
+Users have to explicitly use "include AutoClickMethods" to include the methods
 
 0.4.0
 Fix the 64bit bug and Fixnum! bug

@@ -122,6 +122,44 @@ module AutoClickMethods
   end
 
 
+  def left_drag_32(sx,sy,ex,ey)
+    mouse_move sx,sy
+    sleep 0.1
+    send_input( [@@leftdown32] )
+    sleep 0.1
+    mouse_move ex,ey
+    sleep 0.1
+    send_input( [@@leftup32] )
+    sleep 0.1
+  end
+  
+  def right_drag_32(sx,sy,ex,ey)
+    mouse_move sx,sy
+    sleep 0.1
+    send_input( [@@rightdown32] )
+    sleep 0.1
+    mouse_move ex,ey
+    sleep 0.1
+    send_input( [@@rightup32] )
+    sleep 0.1
+  end
+
+  def key_stroke_32(key_name)
+    code=VirtualKey.code_from_name(key_name)
+    send_input([InputStructure.keyboard_input_32(code,0x0000),
+                InputStructure.keyboard_input_32(code,0x0002)])
+  end
+  
+  def key_down_32(key_name)
+    code=VirtualKey.code_from_name(key_name)
+    send_input([InputStructure.keyboard_input_32(code,0x0000)])
+  end
+  
+  def key_up_32(key_name)
+    code=VirtualKey.code_from_name(key_name)
+    send_input([InputStructure.keyboard_input_32(code,0x0002)])
+  end
+
 ################# END TEMP #####################
   
   def cursor_position

@@ -31,29 +31,6 @@ module AutoClickMethods
     User32.SetCursorPos(get_screen_resolution[0]*x,get_screen_resolution[1]*y)
   end
   
-  # def mouse_move_pixel_absolute(x,y)
-  #   User32.SetCursorPos(x,y)
-  # end
-  
-  # def mouse_move_percentage_relative_virtual(x,y) # broken
-  #   move = InputStructure.mouse_input(x,y,0,0x0001)
-  #   send_input( [move])
-  # end
-  
-  # def mouse_move_percentage_relative_real(x,y)  # broken
-  #   move = InputStructure.mouse_input(x,y,0,0x4001)
-  #   send_input( [move])
-  # end
-  
-  # def mouse_move_percentage_absolute_virtual(x,y)
-  #   move = InputStructure.mouse_input(x*65536,y*65536,0,0xc001)
-  #   send_input( [move])
-  # end
-  
-  # def mouse_move_percentage_absolute_real(x,y)
-  #   move = InputStructure.mouse_input(x*65536,y*65536,0,0x8001)
-  #   send_input( [move])
-  # end
     
   def right_click
     send_input( [@@rightdown, @@rightup] )
@@ -93,6 +70,59 @@ module AutoClickMethods
     left_click
     left_click
   end
+
+  ################# TEMP #####################
+
+
+  @@rightdown32 = InputStructure.mouse_input_32(0,0,0,0x0008)
+  @@rightup32 = InputStructure.mouse_input_32(0,0,0,0x0010)  
+  @@leftdown32 = InputStructure.mouse_input_32(0,0,0,0x0002)
+  @@leftup32 = InputStructure.mouse_input_32(0,0,0,0x0004)
+  @@middledown32 = InputStructure.mouse_input_32(0,0,0,0x0020)
+  @@middleup32 = InputStructure.mouse_input_32(0,0,0,0x0040)
+
+
+  def right_click_32
+    send_input( [@@rightdown32, @@rightup32] )
+  end
+  
+  def left_click_32
+    send_input( [@@leftdown32, @@leftup32] )
+  end
+  
+  def middle_click_32
+    send_input( [@@middledown32, @@middleup32] )
+  end
+  
+  def mouse_down_32(button_name)
+    case button_name
+    when :right
+      send_input( [@@rightdown32] )
+    when :middle
+      send_input( [@@middledown32] )  
+    else
+      send_input( [@@leftdown32] )
+    end
+  end
+  
+  def mouse_up_32(button_name)
+    case button_name
+    when :right
+      send_input( [@@rightup32] )
+    when :middle
+      send_input( [@@middleup32] )  
+    else
+      send_input( [@@leftup32] )
+    end
+  end  
+  
+  def double_click_32
+    left_click_32
+    left_click_32
+  end
+
+
+################# END TEMP #####################
   
   def cursor_position
     point = " " * 8

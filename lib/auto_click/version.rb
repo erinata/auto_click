@@ -1,3 +1,3 @@
 module AutoClick
-  VERSION = "0.5.2"
+  VERSION = "0.5.9"
 end

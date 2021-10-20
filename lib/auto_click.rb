@@ -270,12 +270,6 @@ module AutoClickMethods
           key_down(:leftshift)
           key_stroke(:tilde)
           key_up(:leftshift)
-        when '/'
-          key_stroke(:slash)
-        when '?'
-          key_down(:leftshift)
-          key_stroke(:question)
-          key_up(:leftshift)  
         when '['
           key_stroke(:branket)
         when '{'

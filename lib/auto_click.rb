@@ -28,7 +28,7 @@ module AutoClickMethods
 
   def mouse_move_percentage(x,y)
     screen_resolution = get_screen_resolution()
-    User32.SetCursorPos(get_screen_resolution[0]*x,get_screen_resolution[1]*y)
+    User32.SetCursorPos(screen_resolution[0]*x, screen_resolution[1]*y)
   end
   
     

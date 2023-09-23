@@ -1,14 +1,17 @@
 PATH
   remote: .
   specs:
-    auto_click (0.1.0)
+    win_auto_click (1.0.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
 
 PLATFORMS
-  x86-mingw32
+  x64-mingw-ucrt
 
 DEPENDENCIES
-  auto_click!
+  win_auto_click!
+
+BUNDLED WITH
+   2.4.19

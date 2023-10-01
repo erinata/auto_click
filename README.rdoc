@@ -23,9 +23,6 @@ To move the mouse cursor to 50,50 ( the top left corner is 0,0) and perform a do
 
   mouse_move(50,50)
   double_click
-
-To move the mouse cursor to 50,50 and perform a right click:
-
   mouse_move(50,50)
   right_click
 

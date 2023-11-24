@@ -1,0 +1,59 @@
+module AutoClickMethods
+    def send_input: (Array[String]) -> void
+
+    def get_screen_resolution: -> Array[Integer]
+
+    def mouse_move: (Integer, Integer) -> void
+
+    def mouse_move_percentage: (Integer, Integer) -> void
+
+    def right_click: -> void
+
+    def left_click: -> void
+
+    def middle_click: -> void
+
+    def mouse_down: (:right | :middle | :left) -> void
+
+    def mouse_up: (:right | :middle | :left) -> void
+
+    def double_click: -> void
+
+    def right_click_32: -> void
+
+    def left_click_32: -> void
+
+    def middle_click_32: -> void
+
+    def mouse_down_32: (:right | :middle | :left) -> void
+
+    def mouse_up_32: (:right | :middle | :left) -> void
+
+    def double_click_32: -> void
+
+    def left_drag_32: (Integer, Integer, Integer, Integer) -> void
+
+    def right_drag_32: (Integer, Integer, Integer, Integer) -> void
+
+    def key_stroke_32: (:right | :middle | :left) -> void
+
+    def key_down_32: (:right | :middle | :left) -> void
+
+    def key_up_32: (:right | :middle | :left) -> void
+
+    def cursor_position: -> Array[Integer]
+
+    def mouse_scroll: (Integer) -> void
+
+    def left_drag: (Integer, Integer, Integer, Integer) -> void
+
+    def right_drag: (Integer, Integer, Integer, Integer) -> void
+
+    def key_stroke: (*(:right | :middle | :left)) -> void
+
+    def key_down: (:right | :middle | :left) -> void
+
+    def key_up: (:right | :middle | :left) -> void
+
+    def type: (String) -> void
+end

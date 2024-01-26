@@ -1,0 +1,67 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="EmptyDirectory" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="IncorrectFormatting" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="MissingYardParamTag" enabled="false" level="INFORMATION" enabled_by_default="false" editorAttributes="INFORMATION_ATTRIBUTES" />
+    <inspection_tool class="MissingYardReturnTag" enabled="false" level="INFORMATION" enabled_by_default="false" editorAttributes="INFORMATION_ATTRIBUTES" />
+    <inspection_tool class="RbsMissingTypeSignature" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="WARNING_ATTRIBUTES" />
+    <inspection_tool class="Rubocop" enabled="false" level="WARNING" enabled_by_default="false" editorAttributes="WARNING_ATTRIBUTES">
+      <option name="mySeverityMap">
+        <map>
+          <entry key="convention" value="INFORMATION" />
+          <entry key="error" value="ERROR" />
+          <entry key="fatal" value="ERROR" />
+          <entry key="refactor" value="INFORMATION" />
+          <entry key="warning" value="WARNING" />
+        </map>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="RubyArgCount" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="RubyClassMethodNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyClassModuleNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyClassVariableNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyConstantNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyControlFlowConversionInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyConvertAllHashesInFileInspections" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="RubyGlobalVariableNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyInstanceMethodNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyInstanceVariableNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyInstanceVariableToStringInspection" enabled="true" level="INFORMATION" enabled_by_default="true" editorAttributes="INFORMATION_ATTRIBUTES" />
+    <inspection_tool class="RubyLiteralArrayInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyLocalVariableNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyNilAnalysis" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myIgnoredReceivers">
+        <list>
+          <Reference>
+            <option name="myValue" value="Array#[]" />
+          </Reference>
+          <Reference>
+            <option name="myValue" value="Enumerable#group_by" />
+          </Reference>
+          <Reference>
+            <option name="myValue" value="Hash#[]" />
+          </Reference>
+          <Reference>
+            <option name="myValue" value="domain" />
+          </Reference>
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="RubyParameterNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RubyResolve" enabled="true" level="ERROR" enabled_by_default="true" editorAttributes="ERRORS_ATTRIBUTES">
+      <option name="warnImplicitResults" value="false" />
+    </inspection_tool>
+    <inspection_tool class="RubyStringKeysInHashInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="RubyTooManyInstanceVariablesInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="m_limit" value="20" />
+    </inspection_tool>
+    <inspection_tool class="RubyTooManyMethodsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+    <inspection_tool class="YARDTagsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

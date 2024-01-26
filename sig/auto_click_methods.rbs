@@ -1,0 +1,60 @@
+module AutoClickMethods
+  def send_input: (Array[String]) -> void
+
+  def get_screen_resolution: -> Array[Integer]
+
+  def mouse_move: (Integer, Integer) -> void
+
+  def mouse_move_percentage: (Integer, Integer) -> void
+
+  def right_click: -> void
+
+  def left_click: -> void
+
+  def middle_click: -> void
+
+  def mouse_down: (:right | :middle | :left) -> void
+
+  def mouse_up: (:right | :middle | :left) -> void
+
+  def double_click: -> void
+
+  def cursor_position: -> Array[Integer]
+
+  def mouse_scroll: (Integer) -> void
+
+  def left_drag: (Integer, Integer, Integer, Integer) -> void
+
+  def right_drag: (Integer, Integer, Integer, Integer) -> void
+
+  def key_stroke: (*(:right | :middle | :left)) -> void
+
+  def key_down: (:right | :middle | :left) -> void
+
+  def key_up: (:right | :middle | :left) -> void
+
+  def type: (String) -> void
+
+  def get_key_state: (:right | :middle | :left) -> Integer
+end
+
+module VirtualKey
+  def self.code_from_name: (Symbol | String | Integer) -> Integer
+end
+
+module User32
+  def self.GetCursorPos: (String) -> Integer
+
+  def self.SetCursorPos: (Integer, Integer) -> Integer
+
+  def self.SendInput: (Integer, String, Integer) -> Integer
+
+  def self.GetKeyState: (Integer) -> Integer
+
+  def self.GetSystemMetrics: (Integer) -> Integer
+end
+
+module InputStructure
+  def self.mouse_input: (Integer, Integer, Integer, Integer) -> String
+
+  def self.keyboard_input: (Integer, Integer) -> String

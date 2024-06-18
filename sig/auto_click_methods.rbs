@@ -58,3 +58,4 @@ module InputStructure
   def self.mouse_input: (Integer, Integer, Integer, Integer) -> String
 
   def self.keyboard_input: (Integer, Integer) -> String
+end

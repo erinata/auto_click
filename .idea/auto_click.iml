@@ -9,15 +9,17 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="ruby-3.3.0-p0" jdkType="RUBY_SDK" />
+    <orderEntry type="jdk" jdkName="ruby-3.3" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v2.5.5, ruby-3.3) [gem]" level="application" />
   </component>
   <component name="RakeTasksCache">
     <option name="myRootTask">
       <RakeTaskImpl id="rake" />
     </option>
   </component>
-  <component name="RakeTasksCache-v2">
+  <component name="RakeTasksCache-v2" failedReloadsCounter="3">
+    <option name="failedReloadsCounter" value="3" />
     <option name="myRootTask">
       <RakeTaskImpl id="rake">
         <subtasks>
